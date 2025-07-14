@@ -1,0 +1,48 @@
+body {
+    Margin: 0;
+    font-family: 'segoe UI', sans-serif;
+    background-color: #f3f3f3;
+    text-align: center;
+}
+
+header {
+    background-image: url('https://source.unsplash.com/featured/?yoga');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    color: black;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.5em 0;
+}
+ 
+.about, .quote, .hgallery, .contact {
+    padding: 20px;
+}
+
+.gallery img {
+    width: 90%;
+    max-width: 400px;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
+.whatsapp-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.whatsapp-button img {
+    vertical-align: middle;
+    width: 24px;
+    margin-right: 8px;
+}
+

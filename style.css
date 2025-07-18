@@ -2,7 +2,7 @@ body {
     Margin: 0;
     font-family: 'segoe UI', sans-serif;
     background-color: #f3f3f3;
-    background-image: linear-gradient(rgba(235, 215, 215, 0.4), rgba(242, 234, 234, 0.4)), url('images/Background.jpg');
+    background-image: linear-gradient(rgba(235, 215, 215, 0.4), rgba(242, 234, 234, 0.4)), url('images/yoga18.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -11,7 +11,7 @@ body {
 }
 
 header {
-    background-image: url('images/Yoga4.jpg');
+    background-image: url('images/Yoga.jpg');
     background-size: cover;
     background-position: center;
     padding: 100px 20px;

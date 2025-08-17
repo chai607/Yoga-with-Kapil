@@ -150,6 +150,14 @@ h2 {
     letter-spacing: 1px;
 }
 
+.about h3 {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #4a6b6f; /* soft tone */
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
 .about p {
     font-size: 1.05em;
     margin-bottom: 15px;
@@ -217,5 +225,6 @@ h2 {
         font-size: 0.9em;
     }
 }
+
 
 

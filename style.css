@@ -24,9 +24,15 @@ h1 {
     font-size: 2em;
     margin: 0.5em 0;
 }
- 
+
+h2 {
+    font-size: 1.5em; /* ~24px */
+    margin: 0.5em 0;
+}
+
 .about, .quote, .gallery, .contact, .timetable {
     padding: 20px;
+    font-size: 1em; /* base size for content */
 }
 
 .gallery img {
@@ -111,7 +117,7 @@ h1 {
 ##}
 
 .quote blockquote {
-    font-size: 1rem; /* smaller than normal text */
+    font-size: 1.1em; /* smaller than normal text */
     font-style: italic;
     font-weight: 500;
     color: #444;
@@ -159,12 +165,57 @@ h1 {
 
 ## Small screen visual 
 
-@media (max-width: 600px) {
-  .quote blockquote {
-      font-size: 0.9rem; /* smaller on mobiles */
-      padding: 8px 12px;
-  }
+##@media (max-width: 600px) {
+#  .quote blockquote {
+#      font-size: 0.9rem; /* smaller on mobiles */
+#      padding: 8px 12px;
+#  }
+#}
+
+
+/* ✅ Responsive font scaling */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    .quote blockquote {
+        font-size: 0.95em;
+    }
+
+    .about, .contact {
+        font-size: 0.95em;
+    }
 }
 
+@media (max-width: 480px) {
+    body {
+        font-size: 13px;
+    }
+
+    h1 {
+        font-size: 1.3em;
+    }
+
+    h2 {
+        font-size: 1.1em;
+    }
+
+    .quote blockquote {
+        font-size: 0.9em;
+    }
+
+    .about, .contact {
+        font-size: 0.9em;
+    }
+}
 
 

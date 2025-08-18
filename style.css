@@ -151,9 +151,9 @@ h2 {
 }
 
 .about h3 {
-    font-size: 1.2em;
+    font-size: 0.9em;
     font-weight: 500;
-    color: #4a6b6f; /* soft tone */
+    color: #4a6b6f; /* softer tone */
     margin-top: 0;
     margin-bottom: 1em;
 }
@@ -225,6 +225,7 @@ h2 {
         font-size: 0.9em;
     }
 }
+
 
 
 

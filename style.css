@@ -1,7 +1,6 @@
 body {
-    Margin: 0;
-    font-family: 'segoe UI', sans-serif;
-/*    background-color: #f3f3f3; */
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
     background-image: linear-gradient(rgba(235, 215, 215, 0.4), rgba(242, 234, 234, 0.4)), url('images/yoga.jpg');
     background-size: cover;
     background-position: center;
@@ -12,6 +11,7 @@ body {
     color: #333;
 }
 
+/* ---------------- HEADER ---------------- */
 header {
     background-image: url('images/Yoga.jpg');
     background-size: cover;
@@ -26,13 +26,14 @@ h1 {
 }
 
 h2 {
-    font-size: 1.5em; /* ~24px */
+    font-size: 1.5em;
     margin: 0.5em 0;
 }
 
+/* ---------------- SECTIONS ---------------- */
 .about, .quote, .gallery, .contact, .timetable {
     padding: 20px;
-    font-size: 1em; /* base size for content */
+    font-size: 1em;
 }
 
 .gallery img {
@@ -42,6 +43,7 @@ h2 {
     border-radius: 10px;
 }
 
+/* ---------------- BUTTONS ---------------- */
 .whatsapp-button {
     display: inline-block;
     margin-top: 20px;
@@ -60,22 +62,23 @@ h2 {
 }
 
 .social-button {
-  display: inline-block;
-  margin: 10px;
-  padding: 10px 20px;
-  background-color: #eee;
-  color: #333;
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 1em;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #eee;
+    color: #333;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
 }
 
 .social-button img {
-  vertical-align: middle;
-  width: 24px;
-  margin-right: 8px;
+    vertical-align: middle;
+    width: 24px;
+    margin-right: 8px;
 }
 
+/* ---------------- TIMETABLE ---------------- */
 .timetable {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
@@ -93,6 +96,8 @@ h2 {
 .timetable li {
     margin: 10px 0;
 }
+
+/* ---------------- CHECKLIST ---------------- */
 .checklist {
     list-style: none;
     padding: 0;
@@ -101,36 +106,25 @@ h2 {
 .checklist li::before {
     content: "✅ ";
 }
-/* .quote blockquote { */
-/*     font-family: 'Georgia', serif; /* Elegant quote font */
-/*     font-size: 1.5em; 
-/*     font-style: italic;
-/*     font-weight: bold;
-/*     color: #4B2E2E; /* Deep earthy tone */
-/*     background: linear-gradient(to right, #fdf3e7, #fceabb); /* Soft golden gradient */
-/*     border-left: 6px solid #c49b63; /* Golden border on left */
-/*     padding: 20px;
-/*     margin: 20px auto;
-/*     max-width: 800px;
-/*     border-radius: 10px; 
-/*     box-shadow: 0 4px 8px rgba(0,0,0,0.1); */
-/* } */
 
+/* ---------------- QUOTES ---------------- */
 .quote blockquote {
-    font-size: 1.1em; /* smaller than normal text */
+    font-size: 1.1em;
     font-style: italic;
     font-weight: 500;
     color: #444;
     line-height: 1.6;
     margin: 20px auto;
-    max-width: 600px; /* keeps it centered and narrow */
+    max-width: 600px;
     padding: 10px 15px;
     border-left: 4px solid #6a5acd; /* purple accent */
-    background: rgba(240, 240, 250, 0.6); /* soft background */
+    background: rgba(240, 240, 250, 0.6);
     border-radius: 8px;
 }
+
+/* ---------------- ABOUT ---------------- */
 .about {
-    background: rgba(255, 255, 255, 0.85); /* soft white overlay */
+    background: rgba(255, 255, 255, 0.85);
     padding: 30px;
     max-width: 800px;
     margin: 30px auto;
@@ -141,19 +135,10 @@ h2 {
     color: #333;
 }
 
-/*.about h2 {
-    font-size: 2em;
-    color: #444;
-    margin-bottom: 15px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-} */
-
 .about h3 {
     font-size: 0.9em;
     font-weight: 500;
-    color: #4a6b6f; /* softer tone */
+    color: #4a6b6f;
     margin-top: 0;
     margin-bottom: 1em;
 }
@@ -171,7 +156,7 @@ h2 {
     margin-top: 15px;
 }
 
-/* Floating Timetable Button */
+/* ---------------- FLOATING BUTTON ---------------- */
 .floating-btn {
     position: fixed;
     bottom: 20px;
@@ -188,12 +173,14 @@ h2 {
     z-index: 1100;
 }
 
+/*-------------- Mobile Friendly Floating Button -----------------*/
+
 .floating-btn:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 14px rgba(0,0,0,0.4);
 }
 
-/* Mobile Friendly Floating Button */
+/* ------------ smaller on mobiles --------------- */
 @media (max-width: 480px) {
     .floating-btn {
         font-size: 0.9em;
@@ -203,17 +190,7 @@ h2 {
     }
 }
 
-## Small screen visual 
-
-##@media (max-width: 600px) {
-#  .quote blockquote {
-#      font-size: 0.9rem; /* smaller on mobiles */
-#      padding: 8px 12px;
-#  }
-#}
-
-
-/* ✅ Responsive font scaling */
+/* ---------------- RESPONSIVE FONTS ---------------- */
 @media (max-width: 768px) {
     body {
         font-size: 14px;
@@ -257,9 +234,3 @@ h2 {
         font-size: 0.9em;
     }
 }
-
-
-
-
-
-

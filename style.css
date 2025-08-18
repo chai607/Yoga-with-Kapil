@@ -1,7 +1,7 @@
 body {
     Margin: 0;
     font-family: 'segoe UI', sans-serif;
-##    background-color: #f3f3f3;
+/*    background-color: #f3f3f3; */
     background-image: linear-gradient(rgba(235, 215, 215, 0.4), rgba(242, 234, 234, 0.4)), url('images/yoga.jpg');
     background-size: cover;
     background-position: center;
@@ -101,20 +101,20 @@ h2 {
 .checklist li::before {
     content: "✅ ";
 }
-##.quote blockquote {
-#    font-family: 'Georgia', serif; /* Elegant quote font */
-#    font-size: 1.5em;
-#    font-style: italic;
-#    font-weight: bold;
-#    color: #4B2E2E; /* Deep earthy tone */
-#    background: linear-gradient(to right, #fdf3e7, #fceabb); /* Soft golden gradient */
-#    border-left: 6px solid #c49b63; /* Golden border on left */
-#    padding: 20px;
-#    margin: 20px auto;
-#    max-width: 800px;
-#    border-radius: 10px;
-#    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-##}
+/* .quote blockquote { */
+/*     font-family: 'Georgia', serif; /* Elegant quote font */
+/*     font-size: 1.5em; 
+/*     font-style: italic;
+/*     font-weight: bold;
+/*     color: #4B2E2E; /* Deep earthy tone */
+/*     background: linear-gradient(to right, #fdf3e7, #fceabb); /* Soft golden gradient */
+/*     border-left: 6px solid #c49b63; /* Golden border on left */
+/*     padding: 20px;
+/*     margin: 20px auto;
+/*     max-width: 800px;
+/*     border-radius: 10px; 
+/*     box-shadow: 0 4px 8px rgba(0,0,0,0.1); */
+/* } */
 
 .quote blockquote {
     font-size: 1.1em; /* smaller than normal text */
@@ -141,14 +141,14 @@ h2 {
     color: #333;
 }
 
-##.about h2 {
+/*.about h2 {
     font-size: 2em;
     color: #444;
     margin-bottom: 15px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-}
+} */
 
 .about h3 {
     font-size: 0.9em;
@@ -257,6 +257,7 @@ h2 {
         font-size: 0.9em;
     }
 }
+
 
 
 

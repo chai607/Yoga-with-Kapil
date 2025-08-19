@@ -93,6 +93,47 @@ h2 {
     margin-right: 8px;
 }
 
+/* Flexbox header with images on both sides */
+.header-with-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Center text block */
+.header-text {
+    flex: 1;
+}
+
+/* Side images */
+.side-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;  /* keeps proportion */
+    border-radius: 10px; /* square with slightly rounded corners */
+}
+
+/* Glow effect */
+.glow-image {
+    box-shadow: 0 0 20px rgba(255, 165, 0, 0.6);
+    border: 2px solid rgba(255, 165, 0, 0.8);
+    border-radius: 12px;
+}
+
+/* Mobile responsive: stack vertically */
+@media (max-width: 768px) {
+    .header-with-images {
+        flex-direction: column;
+    }
+    .side-image {
+        width: 80px;
+        height: 80px;
+    }
+}
+
 /* ---------------- TIMETABLE ---------------- */
 .timetable {
     background-color: rgba(255, 255, 255, 0.8);
@@ -363,3 +404,4 @@ h2 {
     transform: translateY(0);
   }
 }
+

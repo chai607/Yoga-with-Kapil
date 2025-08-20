@@ -409,24 +409,25 @@ h2 {
 
 footer {
   text-align: center;
-  padding: 15px 10px;
-  font-size: 0.85rem;        /* base size */
-  color: #888;               /* softer grey */
-  background: #fafafa;       /* very light background */
-  border-top: 1px solid #e5e5e5; /* subtle divider */
-  line-height: 1.5;
+  padding: 10px 5px;         /* reduced padding */
+  font-size: 0.8rem;         /* slightly smaller */
+  color: #888;
+  background: #fafafa;
+  border-top: 1px solid #e5e5e5;
+  line-height: 1.4;
 }
 
 footer p {
-  margin: 4px 0;
+  margin: 3px 0;
 }
 
 footer .dev-note {
-  font-size: 0.8rem;         /* slightly smaller */
-  color: #999;               /* lighter tone for calm feel */
-  font-family: "Dancing Script", cursive; /* elegant handwritten vibe */
-  opacity: 0.8;              /* softer look */
+  font-size: 0.7rem;         /* smaller signature text */
+  color: #999;
+  font-family: "Dancing Script", cursive;
+  opacity: 0.8;
 }
+
 
 /* RESPONSIVE */
 @media (max-width: 768px) {   /* tablets */
@@ -439,13 +440,14 @@ footer .dev-note {
   }
 }
 
-@media (max-width: 480px) {   /* mobiles */
+/* Mobile optimization */
+@media (max-width: 600px) {
   footer {
-    font-size: 0.75rem;
-    padding: 10px 6px;
+    padding: 6px 4px;        /* minimal padding */
+    font-size: 0.7rem;       /* smaller text */
   }
   footer .dev-note {
-    font-size: 0.65rem;
+    font-size: 0.65rem;      /* shrink signature */
   }
 }
 

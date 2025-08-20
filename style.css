@@ -405,3 +405,47 @@ h2 {
   }
 }
 
+/* Footer for All rights reserved and Develped by name */
+
+footer {
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    background: linear-gradient(90deg, rgba(255,255,255,0.05), rgba(255,255,255,0.1));
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+footer p {
+    color: #ddd;
+    margin: 0;
+}
+
+footer .signature {
+    display: block;
+    margin-top: 5px;
+    font-family: 'Dancing Script', cursive; /* Yogic handwritten vibe */
+    font-size: 1rem;
+    color: #ffcc80; /* saffron tone */
+    text-shadow: 0 0 8px rgba(255, 153, 51, 0.6);
+    font-style: italic;
+    animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 5px #ff9933, 0 0 10px #ff9933; }
+    to   { text-shadow: 0 0 10px #ffcc80, 0 0 20px #ffcc80; }
+}
+
+/* Footer responsiveness */
+@media (max-width: 480px) {
+  footer {
+    font-size: 0.8rem;
+    padding: 15px;
+  }
+
+  footer .om-icon {
+    font-size: 1.2rem;
+  }
+}
+

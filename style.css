@@ -410,11 +410,11 @@ h2 {
 footer {
   text-align: center;
   padding: 15px 10px;
-  font-size: 0.85rem;    /* good base size */
-  color: #555;           /* soft grey */
-  background: #f9f9f9;   /* subtle light bg */
-  border-top: 1px solid #e0e0e0;
-  line-height: 1.4;
+  font-size: 0.85rem;        /* base size */
+  color: #888;               /* softer grey */
+  background: #fafafa;       /* very light background */
+  border-top: 1px solid #e5e5e5; /* subtle divider */
+  line-height: 1.5;
 }
 
 footer p {
@@ -422,9 +422,10 @@ footer p {
 }
 
 footer .dev-note {
-  font-size: 0.75rem;    /* smaller signature text */
-  color: #777;           /* lighter tone */
-  font-style: italic;    /* signature vibe */
+  font-size: 0.8rem;         /* slightly smaller */
+  color: #999;               /* lighter tone for calm feel */
+  font-family: "Dancing Script", cursive; /* elegant handwritten vibe */
+  opacity: 0.8;              /* softer look */
 }
 
 /* RESPONSIVE */
@@ -447,3 +448,4 @@ footer .dev-note {
     font-size: 0.65rem;
   }
 }
+

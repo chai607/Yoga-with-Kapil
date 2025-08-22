@@ -196,9 +196,9 @@ h2 {
     transition: transform 0.3s ease;
 }
 
-.about:hover {
+/* .about:hover {
     transform: scale(1.01); /* gentle hover lift */
-}
+} */
 
 .about h2 {
     font-size: 1.9em;     /* bigger heading */
@@ -478,5 +478,6 @@ footer .dev-note {
     font-size: 0.65rem;      /* shrink signature */
   }
 }
+
 
 

@@ -487,16 +487,18 @@ footer {
   border-top: 1px solid #ddd;   /* subtle divider */
 }
 
-footer p {
-  margin: 2px 0;
-  line-height: 1.2;
-  font-size: 0.6rem;            /*footer font */
+footer .copyright {
+  font-family: "Georgia", serif;   /* elegant font */
+  font-size: 0.75rem;              /* small and subtle */
+  color: #666;                     /* soft grey */
+  margin: 4px 0;
 }
 
 footer .dev-note {
-  font-size: 0.6rem;            /* slightly smaller */
-  color: #888;
-  font-style: italic;
+  font-family: "Courier New", monospace;  /* developer-style font */
+  font-size: 0.7rem;
+  color: #444;
+  margin: 2px 0;
 }
 
 /* Tablet optimization */
@@ -520,6 +522,7 @@ footer .dev-note {
     font-size: 0.5rem;
   }
 }
+
 
 
 

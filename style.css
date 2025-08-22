@@ -212,16 +212,14 @@ h2 {
     margin-bottom: 20px;
 }
 
-/*.about p {
-    font-size: 1.1em;
-    margin-bottom: 15px;
-    color: #444;
-}*/
-
 .about p {
-    text-align: left;       /* Align text to left */
-    max-width: 650px;       /* Restrict width for a neat block */
-    margin: 20px auto;      /* Keep it centered horizontally */
+  text-align: left;
+  max-width: 650px;
+  margin: 20px auto;
+  font-size: 1.05rem;       /* same scale as checklist */
+  color: #444;              /* softer gray */
+  line-height: 1.8;
+  font-family: 'Segoe UI', sans-serif;  /* matches checklist */
 }
 
 
@@ -485,6 +483,7 @@ footer .dev-note {
     font-size: 0.65rem;      /* shrink signature */
   }
 }
+
 
 
 

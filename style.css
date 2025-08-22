@@ -216,13 +216,16 @@ h2 {
   text-align: left;
   max-width: 650px;
   margin: 20px auto;
-  font-size: 1.05rem;       /* same scale as checklist */
-  color: #444;              /* softer gray */
+  font-size: 1.1rem;              /* slightly bigger for readability */
+  color: #444;                    /* calm gray */
   line-height: 1.8;
-  font-family: 'Segoe UI', sans-serif;  /* matches checklist */
-  border-left: 4px solid #6a5acd; /* purple accent */
-  background: rgba(240, 240, 250, 0.6);
+  font-family: 'Segoe UI', sans-serif;
+
+  /* Yogic glow background - same as quote */
+  border-left: 4px solid #6a5acd;   /* subtle purple accent */
+  background: rgba(240, 240, 250, 0.6); /* light purple background */
   border-radius: 8px;
+  padding: 12px 15px;              /* give some breathing space inside */
 }
 
 
@@ -500,6 +503,7 @@ footer .dev-note {
     font-size: 0.5rem;
   }
 }
+
 
 
 

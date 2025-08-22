@@ -454,24 +454,25 @@ main {
 }
 
 /* Footer for All rights reserved and Developed by name */
+/* Minimal copyright footer */
 footer {
   text-align: center;
-  padding: 8px 5px;         /* smaller on mobile */
-  font-size: 0.5rem;        
-  color: #777;              
-  background: #f9f9f9;      
+  padding: 5px 0;              /* very slim height */
+  font-size: 0.7rem;           /* small text */
+  color: #666;                 /* soft grey */
+  background: #f9f9f9;         /* light subtle bg */
   border-top: 1px solid #e0e0e0;
-  line-height: 1.4;
 }
 
 footer p {
-  margin: 3px 0;
+  margin: 2px 0;               /* almost no spacing */
+  line-height: 1.2;
 }
 
 footer .dev-note {
-  font-size: 0.5rem;        
-  color: #777;              
-  font-style: italic;       
+  font-size: 0.65rem;          /* even smaller for signature */
+  color: #888;
+  font-style: italic;
 }
 
 /* RESPONSIVE */
@@ -495,6 +496,7 @@ footer .dev-note {
     font-size: 0.65rem;      /* shrink signature */
   }
 }
+
 
 
 

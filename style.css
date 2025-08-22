@@ -453,6 +453,7 @@ footer {
 }
 
 footer p {
+  Text-align:center;     /*text aligned center */
   margin: 3px 0;
 }
 
@@ -485,6 +486,7 @@ footer .dev-note {
     font-size: 0.65rem;      /* shrink signature */
   }
 }
+
 
 
 

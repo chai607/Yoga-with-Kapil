@@ -438,29 +438,41 @@ h2 {
   }
 }
 
-/* Footer for All rights reserved and Develped by name */
 
+/* Make footer stick to bottom */
+
+html, body {
+  height: 100%;              
+  display: flex;
+  flex-direction: column;    
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  flex: 1;  /* pushes footer down */
+}
+
+/* Footer for All rights reserved and Developed by name */
 footer {
   text-align: center;
-  padding: 8px 5px;         /* reduced padding */
-  font-size: 0.8rem;         /* slightly smaller */
-  color: #555;
-  background: #f9f9f9;     /* subtle background */
+  padding: 8px 5px;         /* smaller on mobile */
+  font-size: 0.8rem;        
+  color: #555;              
+  background: #f9f9f9;      
   border-top: 1px solid #e0e0e0;
   line-height: 1.4;
 }
 
 footer p {
-  margin: 3px 0;           /* tighter spacing */
+  margin: 3px 0;
 }
 
 footer .dev-note {
-  font-size: 0.7rem;         /* smaller signature text */
-  color: #999;
-  font-family: "Dancing Script", cursive;
-  opacity: 0.8;
+  font-size: 0.7rem;        
+  color: #777;              
+  font-style: italic;       
 }
-
 
 /* RESPONSIVE */
 @media (max-width: 768px) {   /* tablets */
@@ -483,6 +495,7 @@ footer .dev-note {
     font-size: 0.65rem;      /* shrink signature */
   }
 }
+
 
 
 

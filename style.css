@@ -457,45 +457,47 @@ main {
 /* Minimal copyright footer */
 footer {
   text-align: center;
-  padding: 5px 0;              /* very slim height */
-  font-size: 0.7rem;           /* small text */
-  color: #666;                 /* soft grey */
-  background: #f9f9f9;         /* light subtle bg */
-  border-top: 1px solid #e0e0e0;
+  padding: 6px 0;               /* slim but visible */
+  font-size: 0.65rem;           /* small standard copyright size */
+  font-weight: normal;          /* ensure not bold */
+  color: #777;                  /* light grey text */
+  background: #f5f5f5;          /* soft neutral bg */
+  border-top: 1px solid #ddd;   /* subtle divider */
 }
 
 footer p {
-  margin: 2px 0;               /* almost no spacing */
+  margin: 2px 0;
   line-height: 1.2;
 }
 
 footer .dev-note {
-  font-size: 0.65rem;          /* even smaller for signature */
+  font-size: 0.6rem;            /* slightly smaller */
   color: #888;
   font-style: italic;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {   /* tablets */
+/* Tablet optimization */
+@media (max-width: 768px) {
   footer {
-    font-size: 0.8rem;
-    padding: 12px 8px;
+    font-size: 0.6rem;
+    padding: 5px 0;
   }
   footer .dev-note {
-    font-size: 0.7rem;
+    font-size: 0.55rem;
   }
 }
 
 /* Mobile optimization */
 @media (max-width: 600px) {
   footer {
-    padding: 6px 4px;        /* minimal padding */
-    font-size: 0.7rem;       /* smaller text */
+    font-size: 0.55rem;         /* very compact on small screens */
+    padding: 4px 0;
   }
   footer .dev-note {
-    font-size: 0.65rem;      /* shrink signature */
+    font-size: 0.5rem;
   }
 }
+
 
 
 

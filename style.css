@@ -490,6 +490,7 @@ footer {
 footer p {
   margin: 2px 0;
   line-height: 1.2;
+  font-size: 0.6rem;            /*footer font */
 }
 
 footer .dev-note {
@@ -519,6 +520,7 @@ footer .dev-note {
     font-size: 0.5rem;
   }
 }
+
 
 
 

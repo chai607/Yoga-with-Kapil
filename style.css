@@ -196,8 +196,8 @@ h2 {
     transition: transform 0.3s ease;
 }
 
-/* .about:hover {
-    transform: scale(1.01); /* gentle hover lift */
+ /*.about:hover {
+    transform: scale(1.01);  gentle hover lift 
 } */
 
 .about h2 {
@@ -519,6 +519,7 @@ footer .dev-note {
     font-size: 0.5rem;
   }
 }
+
 
 
 

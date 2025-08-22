@@ -216,16 +216,15 @@ h2 {
   text-align: left;
   max-width: 650px;
   margin: 20px auto;
-  font-size: 1.1rem;              /* slightly bigger for readability */
-  color: #444;                    /* calm gray */
+  padding: 15px 18px;                /* inner space for glow */
+  font-size: 1.1rem;                 /* slightly bigger font */
+  color: #444;                       /* soft gray text */
   line-height: 1.8;
   font-family: 'Segoe UI', sans-serif;
 
-  /* Yogic glow background - same as quote */
-  border-left: 4px solid #6a5acd;   /* subtle purple accent */
-  background: rgba(240, 240, 250, 0.6); /* light purple background */
+  /* Yogic glow background (same style as quote) */
+  background: rgba(240, 240, 250, 0.6);
   border-radius: 8px;
-  padding: 12px 15px;              /* give some breathing space inside */
 }
 
 
@@ -503,6 +502,7 @@ footer .dev-note {
     font-size: 0.5rem;
   }
 }
+
 
 
 

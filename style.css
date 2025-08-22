@@ -444,17 +444,16 @@ h2 {
 
 footer {
   text-align: center;
-  padding: 10px 5px;         /* reduced padding */
+  padding: 8px 5px;         /* reduced padding */
   font-size: 0.8rem;         /* slightly smaller */
-  color: #888;
-  background: #fafafa;
-  border-top: 1px solid #e5e5e5;
+  color: #555;
+  background: #f9f9f9;     /* subtle background */
+  border-top: 1px solid #e0e0e0;
   line-height: 1.4;
 }
 
 footer p {
-  Text-align:center;     /*text aligned center */
-  margin: 3px 0;
+  margin: 3px 0;           /* tighter spacing */
 }
 
 footer .dev-note {
@@ -486,6 +485,7 @@ footer .dev-note {
     font-size: 0.65rem;      /* shrink signature */
   }
 }
+
 
 
 

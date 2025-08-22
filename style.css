@@ -212,11 +212,18 @@ h2 {
     margin-bottom: 20px;
 }
 
-.about p {
+/*.about p {
     font-size: 1.1em;
     margin-bottom: 15px;
     color: #444;
+}*/
+
+.about p {
+    text-align: left;       /* Align text to left */
+    max-width: 650px;       /* Restrict width for a neat block */
+    margin: 20px auto;      /* Keep it centered horizontally */
 }
+
 
 .about .checklist {
     list-style: none;
@@ -478,6 +485,7 @@ footer .dev-note {
     font-size: 0.65rem;      /* shrink signature */
   }
 }
+
 
 
 

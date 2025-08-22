@@ -457,8 +457,8 @@ main {
 footer {
   text-align: center;
   padding: 8px 5px;         /* smaller on mobile */
-  font-size: 0.8rem;        
-  color: #555;              
+  font-size: 0.5rem;        
+  color: #777;              
   background: #f9f9f9;      
   border-top: 1px solid #e0e0e0;
   line-height: 1.4;
@@ -469,7 +469,7 @@ footer p {
 }
 
 footer .dev-note {
-  font-size: 0.7rem;        
+  font-size: 0.5rem;        
   color: #777;              
   font-style: italic;       
 }
@@ -495,6 +495,7 @@ footer .dev-note {
     font-size: 0.65rem;      /* shrink signature */
   }
 }
+
 
 
 

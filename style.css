@@ -223,9 +223,9 @@ h2 {
   font-family: 'Segoe UI', sans-serif;
 
   /* Yogic glow background (same style as quote) */
-/*  background: rgba(240, 240, 250, 0.6);
+/background: rgba(240, 240, 250, 0.6);
   border-radius: 8px;
-}*/
+}
 
 /* Tablet optimization */
 @media (max-width: 768px) {
@@ -519,6 +519,7 @@ footer .dev-note {
     font-size: 0.5rem;
   }
 }
+
 
 
 

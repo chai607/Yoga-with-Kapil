@@ -480,7 +480,7 @@ main {
 footer {
   text-align: center;
   padding: 6px 0;               /* slim but visible */
-  font-size: 0.65rem;           /* small standard copyright size */
+  font-size: 0.61rem;           /* small standard copyright size */
   font-weight: normal;          /* ensure not bold */
   color: #777;                  /* light grey text */
   background: #f5f5f5;          /* soft neutral bg */
@@ -519,6 +519,7 @@ footer .dev-note {
     font-size: 0.5rem;
   }
 }
+
 
 
 

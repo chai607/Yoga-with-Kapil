@@ -220,6 +220,9 @@ h2 {
   color: #444;              /* softer gray */
   line-height: 1.8;
   font-family: 'Segoe UI', sans-serif;  /* matches checklist */
+  border-left: 4px solid #6a5acd; /* purple accent */
+  background: rgba(240, 240, 250, 0.6);
+  border-radius: 8px;
 }
 
 
@@ -497,6 +500,7 @@ footer .dev-note {
     font-size: 0.5rem;
   }
 }
+
 
 
 

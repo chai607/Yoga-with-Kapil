@@ -177,7 +177,7 @@ function fadeOut(audio) {
     function playOmOnce() {
   fadeIn(audio).then(() => {
     // Stop after 10 seconds with fade-out
-    setTimeout(() => fadeOut(audio), 10000);
+    setTimeout(() => fadeOut(audio), 12000);
   });
 		
       // Remove all event listeners so it only plays once
@@ -189,7 +189,7 @@ function fadeOut(audio) {
   // Try autoplay on page load
 window.addEventListener("load", () => {
   fadeIn(audio).then(() => {
-    setTimeout(() => fadeOut(audio), 10000);
+    setTimeout(() => fadeOut(audio), 12000);
   }).catch(() => {
     // Autoplay blocked → wait for user interaction instead
     document.addEventListener("click", playOmOnce);
@@ -217,6 +217,7 @@ window.addEventListener("load", () => {
 			</body>
 			</html>
 					
+
 
 
 

@@ -133,36 +133,44 @@
 <script>
 	const audio = document.getElementById("omAudio");
     const playBtn = document.getElementById("playOmBtn");
-// Fade-in audio (~3s)
+
+// Detect mobile
+const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+// Fade durations
+const fadeStep = isMobile ? 0.05 : 0.02;   // faster ramp-up on mobile
+const fadeInterval = isMobile ? 100 : 150; // shorter interval on mobile
+	
+// Fade-in audio
 function fadeIn(audio) {
   audio.volume = 0;
   return audio.play().then(() => {
     let vol = 0;
     const fade = setInterval(() => {
       if (vol < 1) {
-        vol += 0.02; // smooth ramp-up
-        audio.volume = vol;
+        vol += fadeStep;
+        audio.volume = Math.min(vol, 1);
       } else {
         clearInterval(fade);
       }
-    }, 150);
+    }, fadeInterval);
   });
 }
 
-// Fade-out audio (~3s)
+// Fade-out audio
 function fadeOut(audio) {
   let vol = audio.volume;
   const fade = setInterval(() => {
     if (vol > 0.01) {
-      vol -= 0.02;
+      vol -= fadeStep;
       audio.volume = Math.max(vol, 0);
     } else {
       clearInterval(fade);
       audio.pause();
       audio.currentTime = 0; // reset
-      hideButton(); // always hide after finish
+      hideButton();
     }
-  }, 150);
+  }, fadeInterval);
 }
 
 // Smoothly hide the button
@@ -191,19 +199,21 @@ function playOmOnce() {
   });
 }
 
-	// Universal unlock handler
+	// Unlock handler (runs once on first interaction)
 function enableAudio() {
   playOmOnce();
+  removeInteractionListeners();
+}
 
 
 	
-      // Remove triggers once audio has started
-      document.removeEventListener("click", enableAudio);
-      document.removeEventListener("touchstart", enableAudio);
-      document.removeEventListener("scroll", enableAudio);
-      document.removeEventListener("keydown", enableAudio);
+   // Remove all listeners
+function removeInteractionListeners() {
+  document.removeEventListener("click", enableAudio);
+  document.removeEventListener("touchstart", enableAudio);
+  document.removeEventListener("scroll", enableAudio);
+  document.removeEventListener("keydown", enableAudio);
 }
-
 
   // Try autoplay on page load
 window.addEventListener("load", () => {
@@ -212,7 +222,7 @@ window.addEventListener("load", () => {
   }).catch(() => {
     // Autoplay blocked → wait for user interaction
     document.addEventListener("click", enableAudio);
-    document.addEventListener("touchstart", enableAudio, { once: true });
+    document.addEventListener("touchstart", enableAudio);
     document.addEventListener("scroll", enableAudio);
     document.addEventListener("keydown", enableAudio);
 
@@ -235,6 +245,7 @@ playBtn.addEventListener("click", () => {
            <</body>
 			</html>
 					
+
 
 
 

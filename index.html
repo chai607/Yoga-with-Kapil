@@ -174,29 +174,47 @@ function hideButton() {
 }
 
 	
-// Main function to play Om once
+// Play Om with restart protection
 function playOmOnce() {
+  // Stop if already playing, then restart
+  if (!audio.paused) {
+    audio.pause();
+    audio.currentTime = 0;
+  }
+
   fadeIn(audio).then(() => {
+    // Hide button immediately if showing
+    hideButton();
+
     // Start fade-out at 10s → last 3s fades out
     setTimeout(() => fadeOut(audio), 10000);
   });
+}
 
-		
-      // Remove all event listeners so it only plays once
-      document.removeEventListener("click", playOmOnce);
-      document.removeEventListener("touchstart", playOmOnce);
-      document.removeEventListener("scroll", playOmOnce);
-    }
+	// Universal unlock handler
+function enableAudio() {
+  playOmOnce();
+}
+
+	
+      // Remove triggers once audio has started
+      document.removeEventListener("click", enableAudio);
+      document.removeEventListener("touchstart", enableAudio);
+      document.removeEventListener("scroll", enableAudio);
+      document.removeEventListener("keydown", enableAudio);
+ }
+
 
   // Try autoplay on page load
 window.addEventListener("load", () => {
   fadeIn(audio).then(() => {
     setTimeout(() => fadeOut(audio), 10000);
   }).catch(() => {
-    // Autoplay blocked → wait for user interaction instead
-    document.addEventListener("click", playOmOnce);
-    document.addEventListener("touchstart", playOmOnce);
-    document.addEventListener("scroll", playOmOnce);
+    // Autoplay blocked → wait for user interaction
+    document.addEventListener("click", enableAudio);
+    document.addEventListener("touchstart", enableAudio, { once: true });
+    document.addEventListener("scroll", enableAudio);
+    document.addEventListener("keydown", enableAudio);
 
     // Show fallback button only if user does *nothing* for 8s
     setTimeout(() => {
@@ -217,6 +235,7 @@ playBtn.addEventListener("click", () => {
            <</body>
 			</html>
 					
+
 
 
 

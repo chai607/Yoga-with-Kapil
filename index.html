@@ -175,30 +175,41 @@ function fadeOut(audio) {
 	
 // Main function to play Om once
     function playOmOnce() {
-      fadeIn(audio);
-
-      // Stop after 10 seconds with fade-out
-      setTimeout(() => fadeOut(audio), 10000);
-
+  fadeIn(audio).then(() => {
+    // Stop after 10 seconds with fade-out
+    setTimeout(() => fadeOut(audio), 10000);
+  });
+		
       // Remove all event listeners so it only plays once
       document.removeEventListener("click", playOmOnce);
       document.removeEventListener("touchstart", playOmOnce);
       document.removeEventListener("scroll", playOmOnce);
     }
 
-    // Trigger on first user interaction
+  // Try autoplay on page load
+window.addEventListener("load", () => {
+  fadeIn(audio).then(() => {
+    setTimeout(() => fadeOut(audio), 10000);
+  }).catch(() => {
+    // Autoplay blocked → wait for user interaction instead
     document.addEventListener("click", playOmOnce);
     document.addEventListener("touchstart", playOmOnce);
     document.addEventListener("scroll", playOmOnce);
+
+    // Show fallback button only if user does *nothing* for 8s
+    setTimeout(() => {
+      if (audio.paused) playBtn.style.display = "block";
+    }, 8000);
+  });
+});
 
     // Fallback button logic
     playBtn.addEventListener("click", () => {
       playBtn.classList.add("fade-out");
       setTimeout(() => playBtn.style.display = "none", 600);
 
-      fadeIn(audio);
-      setTimeout(() => fadeOut(audio), 10000);
-    });
+      playOmOnce();
+});
 	
 </script>
 
@@ -206,6 +217,7 @@ function fadeOut(audio) {
 			</body>
 			</html>
 					
+
 
 
 

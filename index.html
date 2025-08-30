@@ -194,7 +194,7 @@ function playOmOnce() {
 	// Universal unlock handler
 function enableAudio() {
   playOmOnce();
-}
+
 
 	
       // Remove triggers once audio has started
@@ -202,7 +202,7 @@ function enableAudio() {
       document.removeEventListener("touchstart", enableAudio);
       document.removeEventListener("scroll", enableAudio);
       document.removeEventListener("keydown", enableAudio);
- }
+}
 
 
   // Try autoplay on page load
@@ -235,6 +235,7 @@ playBtn.addEventListener("click", () => {
            <</body>
 			</html>
 					
+
 
 
 

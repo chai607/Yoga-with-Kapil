@@ -191,7 +191,7 @@ function playOmOnce() {
   // Try autoplay on page load
 window.addEventListener("load", () => {
   fadeIn(audio).then(() => {
-    setTimeout(() => fadeOut(audio), 12000);
+    setTimeout(() => fadeOut(audio), 10000);
   }).catch(() => {
     // Autoplay blocked → wait for user interaction instead
     document.addEventListener("click", playOmOnce);
@@ -217,6 +217,7 @@ playBtn.addEventListener("click", () => {
            <</body>
 			</html>
 					
+
 
 
 

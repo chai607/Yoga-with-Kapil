@@ -131,6 +131,8 @@
 <button id="playOmBtn" style="display:none;">🔊 Play Om</button>
 
 <script>
+	const audio = document.getElementById("omAudio");
+    const playBtn = document.getElementById("playOmBtn");
 // Fade-in audio
 function fadeIn(audio) {
   audio.volume = 0;
@@ -145,11 +147,12 @@ function fadeIn(audio) {
       }
     }, 200);
   }).catch(() => {
-    // do nothing, autoplay failure handled outside
+    // If autoplay fails, show fallback button
+        playBtn.style.display = "block";
   });
 }
 
-// Fade-out audio
+// Fade-out audio + auto-hide button
 function fadeOut(audio) {
   let vol = audio.volume;
   const fade = setInterval(() => {
@@ -159,36 +162,51 @@ function fadeOut(audio) {
     } else {
       audio.pause();
       clearInterval(fade);
+		
+		// Smooth fade-out of button too
+     if (playBtn) {
+     playBtn.classList.add("fade-out");
+    setTimeout(() => playBtn.style.display = "none", 600);
+     }
     }
   }, 200);
 }
 
-window.addEventListener("load", () => {
-  const audio = document.getElementById("omAudio");
-  const playBtn = document.getElementById("playOmBtn");
+	
+// Main function to play Om once
+    function playOmOnce() {
+      fadeIn(audio);
 
-  // Try autoplay
-  audio.volume = 0;
-  audio.play().then(() => {
-    fadeIn(audio);
-    setTimeout(() => fadeOut(audio), 13000); // stop after 15s
-  }).catch(() => {
-    // Autoplay blocked → show button
-    playBtn.style.display = "block";
-  });
+      // Stop after 10 seconds with fade-out
+      setTimeout(() => fadeOut(audio), 10000);
 
-  // If user clicks fallback button
-  playBtn.addEventListener("click", () => {
-    playBtn.style.display = "none"; // hide immediately
-    fadeIn(audio);
-    setTimeout(() => fadeOut(audio), 13000);
-  });
-});
+      // Remove all event listeners so it only plays once
+      document.removeEventListener("click", playOmOnce);
+      document.removeEventListener("touchstart", playOmOnce);
+      document.removeEventListener("scroll", playOmOnce);
+    }
+
+    // Trigger on first user interaction
+    document.addEventListener("click", playOmOnce);
+    document.addEventListener("touchstart", playOmOnce);
+    document.addEventListener("scroll", playOmOnce);
+
+    // Fallback button logic
+    playBtn.addEventListener("click", () => {
+      playBtn.classList.add("fade-out");
+      setTimeout(() => playBtn.style.display = "none", 600);
+
+      fadeIn(audio);
+      setTimeout(() => fadeOut(audio), 10000);
+    });
+	
 </script>
-   
+
+				
 			</body>
 			</html>
 					
+
 
 
 

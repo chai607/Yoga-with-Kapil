@@ -222,14 +222,15 @@ window.addEventListener("load", () => {
     if (isMobile) {
       // 📱 Mobile/Tablet → scroll/touch/click
       document.addEventListener("touchstart", enableAudio, { once: true });
+	  document.addEventListener("touchmove", enableAudio, { once: true, passive: true }); // ✅ catches swipe even if no real scroll
       document.addEventListener("scroll", enableAudio, { passive: true });
       document.addEventListener("click", enableAudio, { once: true });
     } else {
       // 💻 Laptop/Desktop → scroll/click/keydown/trackpad
       document.addEventListener("click", enableAudio, { once: true });
-      document.addEventListener("scroll", enableAudio, { passive: true });
+      document.addEventListener("scroll", enableAudio, { passive: true, once: true});
       document.addEventListener("keydown", enableAudio, { once: true });
-      document.addEventListener("wheel", enableAudio, { once: true, passive: true });
+      document.addEventListener("wheel", enableAudio, { once: true, passive: true }); // ✅ for mouse wheel / touchpad scrolls
     }
 
      // Show fallback button only after 8s if still paused
@@ -251,6 +252,7 @@ playBtn.addEventListener("click", () => {
            <</body>
 			</html>
 					
+
 
 
 

@@ -134,6 +134,11 @@
 	const audio = document.getElementById("omAudio");
     const playBtn = document.getElementById("playOmBtn");
 
+ // Force reset safeguard on every load
+  audio.pause();
+  audio.currentTime = 0;
+  audio.volume = 1; // reset to full volume before fade-in logic
+	
 // Detect mobile
 const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
@@ -246,6 +251,7 @@ playBtn.addEventListener("click", () => {
            <</body>
 			</html>
 					
+
 
 
 

@@ -148,12 +148,12 @@ function fadeIn(audio) {
     let vol = 0;
     const fade = setInterval(() => {
       if (vol < 1) {
-        vol += fadeStep;
-        audio.volume = Math.min(vol, 1);
+        vol += 0.02;
+        audio.volume = vol;
       } else {
         clearInterval(fade);
       }
-    }, fadeInterval);
+    }, 150);
   });
 }
 
@@ -162,15 +162,15 @@ function fadeOut(audio) {
   let vol = audio.volume;
   const fade = setInterval(() => {
     if (vol > 0.01) {
-      vol -= fadeStep;
+      vol -= 0.02;
       audio.volume = Math.max(vol, 0);
     } else {
       clearInterval(fade);
       audio.pause();
-      audio.currentTime = 0; // reset
-      hideButton();
+      audio.currentTime = 0;
+      hideButton(); // disappear after finish
     }
-  }, fadeInterval);
+  }, 150);
 }
 
 // Smoothly hide the button
@@ -184,17 +184,12 @@ function hideButton() {
 	
 // Play Om with restart protection
 function playOmOnce() {
-  // Stop if already playing, then restart
   if (!audio.paused) {
     audio.pause();
     audio.currentTime = 0;
   }
-
   fadeIn(audio).then(() => {
-    // Hide button immediately if showing
-    hideButton();
-
-    // Start fade-out at 10s → last 3s fades out
+    hideButton(); // hide button immediately if visible
     setTimeout(() => fadeOut(audio), 10000);
   });
 }
@@ -202,42 +197,48 @@ function playOmOnce() {
 	// Unlock handler (runs once on first interaction)
 function enableAudio() {
   playOmOnce();
-  removeInteractionListeners();
+  removeAllListeners();
 }
 
-
+// Remove all unlock listeners
+function removeAllListeners() {
+  ["click","touchstart","keydown","scroll","wheel"].forEach(ev => {
+    document.removeEventListener(ev, enableAudio);
+  });
+}
 	
-   // Remove all listeners
-function removeInteractionListeners() {
-  document.removeEventListener("click", enableAudio);
-  document.removeEventListener("touchstart", enableAudio);
-  document.removeEventListener("scroll", enableAudio);
-  document.removeEventListener("keydown", enableAudio);
-}
-
-  // Try autoplay on page load
+ // Main logic
 window.addEventListener("load", () => {
   fadeIn(audio).then(() => {
+    // ✅ Om autoplay worked → never show button
     setTimeout(() => fadeOut(audio), 10000);
   }).catch(() => {
-    // Autoplay blocked → wait for user interaction
-    document.addEventListener("click", enableAudio);
-    document.addEventListener("touchstart", enableAudio);
-    document.addEventListener("scroll", enableAudio);
-    document.addEventListener("keydown", enableAudio);
+    // ❌ Autoplay blocked → add interaction listeners
+    if (isMobile) {
+      // 📱 Mobile/Tablet → scroll/touch/click
+      document.addEventListener("touchstart", enableAudio, { once: true });
+      document.addEventListener("scroll", enableAudio, { passive: true });
+      document.addEventListener("click", enableAudio, { once: true });
+    } else {
+      // 💻 Laptop/Desktop → scroll/click/keydown/trackpad
+      document.addEventListener("click", enableAudio, { once: true });
+      document.addEventListener("scroll", enableAudio, { passive: true });
+      document.addEventListener("keydown", enableAudio, { once: true });
+      document.addEventListener("wheel", enableAudio, { once: true, passive: true });
+    }
 
-    // Show fallback button only if user does *nothing* for 8s
+     // Show fallback button only after 8s if still paused
     setTimeout(() => {
       if (audio.paused) playBtn.style.display = "block";
     }, 8000);
   });
 });
 
-    // Fallback button logic
+ // Fallback button → play Om, then fade out and disappear forever
 playBtn.addEventListener("click", () => {
   playOmOnce();
 });
-
+</script>
 				
 </script>
 
@@ -245,6 +246,7 @@ playBtn.addEventListener("click", () => {
            <</body>
 			</html>
 					
+
 
 
 

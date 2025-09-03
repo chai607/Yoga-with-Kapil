@@ -195,7 +195,7 @@ function playOmOnce() {
   }
   fadeIn(audio).then(() => {
     hideButton(); // hide button immediately if visible
-    setTimeout(() => fadeOut(audio), 10000);
+    setTimeout(() => fadeOut(audio), 8000);
   });
 }
 
@@ -216,7 +216,7 @@ function removeAllListeners() {
 window.addEventListener("load", () => {
   fadeIn(audio).then(() => {
     // ✅ Om autoplay worked → never show button
-    setTimeout(() => fadeOut(audio), 10000);
+    setTimeout(() => fadeOut(audio), 8000);
   }).catch(() => {
     // ❌ Autoplay blocked → add interaction listeners
     if (isMobile) {
@@ -252,6 +252,7 @@ playBtn.addEventListener("click", () => {
            <</body>
 			</html>
 					
+
 
 
 

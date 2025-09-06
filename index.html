@@ -228,7 +228,7 @@ window.addEventListener("load", () => {
     } else {
       // 💻 Laptop/Desktop → scroll/click/keydown/trackpad
       document.addEventListener("click", enableAudio, { once: true });
-      document.addEventListener("scroll", enableAudio, { passive: true, once: true});
+      document.addEventListener("scroll", enableAudio, { passive: true });
       document.addEventListener("keydown", enableAudio, { once: true });
       document.addEventListener("wheel", enableAudio, { once: true, passive: true }); // ✅ for mouse wheel / touchpad scrolls
     }
@@ -252,6 +252,7 @@ playBtn.addEventListener("click", () => {
            </body>
 			</html>
 					
+
 
 
 

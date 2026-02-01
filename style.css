@@ -1,9 +1,9 @@
 /* Mobile viewpoint safety fix */
-html, body { 
+/*html, body { 
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
-} 
+} */
 
 body {
     margin: 0;
@@ -786,20 +786,21 @@ footer .dev-note {
   }
 }
 
-section {
+/*section {
   max-width: 100%;
   box-sizing: border-box;
-}
+}*/
 
-.play-om,
+/*.play-om,
 .timetable {
   max-width: calc(100vw - 20px);
   right: 10px;
-}
+}*/
 
 
 /* Global safety logos will not left in mobile */ 
  
+
 
 
 

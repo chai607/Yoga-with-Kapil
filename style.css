@@ -772,9 +772,10 @@ footer .dev-note {
 
 /* Global safety logos will not left in mobile */ 
 
-html, body {
-  overflow-x: hidden;
-}
+/ *html, body { */
+/*  overflow-x: hidden; */
+/* } */
+
 
 
 

@@ -18,6 +18,21 @@ body {
     color: #333;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    display:block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 /* ---------------- HEADER ---------------- */
 header {
     background-image: url('images/Yoga.jpg');
@@ -59,11 +74,30 @@ h2 {
 }
 
 .gallery img {
-    : 90%;
-    max-: 400px;
-    margin: 10px auto;
-    border-radius: 10px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    border-radius: 12px;
+    display: block;
+    object-fit: cover;
 }
+
+.gallery {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.gallery-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+
 
 /* ---------------- BUTTONS ---------------- */
 .whatsapp-button {
@@ -800,6 +834,7 @@ footer .dev-note {
 
 /* Global safety logos will not left in mobile */ 
  
+
 
 
 

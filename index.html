@@ -385,9 +385,23 @@ playBtn.addEventListener("click", () => {
   }
 </script>
 
+			<!-- Slide bar java program -->
+<script>
+  const cards = document.querySelectorAll('.testimonial-card');
+  let currentIndex = 0;
+
+  setInterval(() => {
+    cards[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex + 1) % cards.length;
+    cards[currentIndex].classList.add('active');
+  }, 4000); // change slide every 4 seconds
+</script>
+
+				
            </body>
 			</html>
 					
+
 
 
 

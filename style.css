@@ -660,34 +660,40 @@ footer .dev-note {
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
   position: relative;
   cursor: pointer;
-  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  min-height: 260px;      /* KEY FIX */
+  height: auto;           /* KEY FIX */
+  overflow: visible;      /* KEY FIX */
 }
 
+
 .postcard:hover {
-  transform: translateY(-8px);
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+  z-index: 5;
 }
+
 
 /* Default Text */
 .short-text {
   font-size: 1.1rem;
   color: #333;
+  font-weight: 500;
 }
+
 
 /* Hover Content */
 .hover-text {
-  position: absolute;
-  inset: 0;
   background: #2c5f5d;
   color: #fff;
   padding: 25px;
   border-radius: 16px;
-  opacity: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  transition: opacity 0.4s ease;
+  margin-top: 15px;
+  display: none;
   font-size: 0.95rem;
+  line-height: 1.6;
 }
+
 
 .hover-text span {
   margin-top: 15px;
@@ -695,8 +701,9 @@ footer .dev-note {
 }
 
 .postcard:hover .hover-text {
-  opacity: 1;
+  display: block;
 }
+
 
 /* Slider Animation */
 @keyframes slide {
@@ -714,6 +721,7 @@ footer .dev-note {
     padding: 20px;
   }
 }
+
 
 
 

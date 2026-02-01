@@ -651,6 +651,9 @@ footer .dev-note {
   justify-content: center;
 }
 
+.slide.active {
+    display: flex;
+}
 /* Postcard Style */
 .postcard {
   background: #ffffff;
@@ -668,7 +671,7 @@ footer .dev-note {
 
 
 .postcard:hover {
-  transform: translateY(-8px) scale(1.03);
+  transform: translateY(-6px);
   box-shadow: 0 18px 40px rgba(0,0,0,0.15);
   z-index: 5;
 }
@@ -722,13 +725,56 @@ footer .dev-note {
   }
 }
 
+/* dots section */ 
+
+.dots {
+  margin-top: 20px;
+}
+
+.dots span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  background: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dots span.active {
+  background: #2c5f5d;
+}
 
 
+/* mobile safe */
 
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #2c5f5d;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
 
+.nav.prev { left: 10px; }
+.nav.next { right: 10px; }
 
+@media (max-width: 600px) {
+  .nav {
+    padding: 6px 10px;
+  }
+}
 
+/* Global safety logos will not left in mobile */ 
 
+html, body {
+  overflow-x: hidden;
+}
 
 
 

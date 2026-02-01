@@ -641,7 +641,7 @@ footer .dev-note {
 
 .slides {
   display: flex;
-  animation: slide 12s infinite;
+  transition: transform 0.6s ease-in-out;
 }
 
 /* Individual Slide */
@@ -671,9 +671,18 @@ footer .dev-note {
 
 
 .postcard:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px);
   box-shadow: 0 18px 40px rgba(0,0,0,0.15);
   z-index: 5;
+}
+
+.postcard {
+  overflow: hidden;
+}
+
+.hover-text {
+  overflow-y: auto;
+  line-height: 1.6;
 }
 
 
@@ -775,6 +784,7 @@ footer .dev-note {
 / *html, body { */
 /*  overflow-x: hidden; */
 /* } */
+
 
 
 

@@ -460,6 +460,13 @@ h2 {
   }
 }
 
+/* Testimonial button */
+.testimonial-item {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
 
 /* Make footer stick to bottom */
 
@@ -615,3 +622,4 @@ footer .dev-note {
     transform: scale(1);
   }
 }
+

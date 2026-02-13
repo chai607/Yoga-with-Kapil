@@ -66,6 +66,12 @@
     📅 Timetable
 </button>
 
+				
+<button id="testimonialsBtn" class="floating-btn">
+  💬 Testimonials
+</button>
+
+				
 <!-- Timetable Modal -->
 <div id="timetableModal" class="modal">
   <div class="modal-content">
@@ -100,6 +106,70 @@
   </div>
 </div>
 
+				
+<!-- Testimonials Modal -->
+<div id="testimonialsModal" class="modal">
+  <div class="modal-content">
+    <span id="closeTestimonials" class="close">&times;</span>
+
+    <h2>Student Testimonials</h2>
+
+    <div class="testimonial-item">
+      <p>
+        I have been attending Kapil’s yoga classes for the past three years, and the experience has been truly enriching. He follows a very thoughtful, step-by-step approach, gradually training the body to safely and confidently reach the final yoga poses.
+        He gives personal attention to every student in the class, ensuring correct alignment and understanding. What I appreciate most is his emphasis on making students independent—he ensures we are able to practice each asana at home and clearly explains its importance and benefits. 
+		This approach has helped me build consistency, confidence, and a deeper connection with my practice.
+      </p>
+      <strong>– Pratiksha Nagori</strong>
+    </div>
+
+    <div class="testimonial-item">
+      <p>
+        Yoga has helped me immensely. I’ve noticed improved flexibility, better focus, and a greater sense of inner balance through regular practice. 
+		I’m ever grateful for your guidance. 
+      </p>
+      <strong>– Mohan Kagankar</strong>
+    </div>
+
+	  <div class="testimonial-item">
+      <p>
+        I have always kept my focus on strength training and gym but one fine day I attended the yoga session just to experience and after that I never want to miss a single session, it has been such a good change in terms of balance I find now mentally and emotionally with the guidance Kapil sir provides. 
+		He also makes sure to take care of any special medical condition you are going through. I have experienced new meditation and practices such as Yoganidra which has helped in manifestation in life. 
+		Overall always a positive vibe and change.
+      </p>
+      <strong>– Ashish Mishra</strong>
+    </div>
+
+	  <div class="testimonial-item">
+      <p>
+        An incredibly patient yoga instructor. The gentle guidance, calming presence, and positive energy make every class feel like a safe space for both body and mind. With thoughtful attention to alignment, each session feels balanced and grounding. 
+		I always leave feeling peaceful, lighter, and deeply grateful for the practice.
+      </p>
+      <strong>– Ekta Rajani</strong>
+    </div>
+
+	  <div class="testimonial-item">
+      <p>
+        You are one of the best Yoga Teacher I ever met. I just really like the way you teach with passion & sincerity with different asanas which help me to reduce my lower back pain & improved physical strength. And I loved the meditations that you take in the end which helps to heal my mind and soul. 
+		I also appreciate your podcast which explains what is exactly yoga is.
+        Thank you Sir with deep deep gratitude
+      </p>
+      <strong>– Ekta Rajani</strong>
+    </div>
+
+	  <div class="testimonial-item">
+      <p>
+        I have been associated with Kapil Sir’s yoga classes since 2017 and started practicing meditation regularly from then. Before joining, I struggled with frequent migraines, but with consistent practice, they have reduced significantly and now occur rarely. Along with physical relief, I’ve experienced strong mental and spiritual growth that positively impacts my daily life. 
+		I’m truly grateful to Kapil Sir for his guidance in yoga and meditation.
+      </p>
+      <strong>– Chaitanya Chikhalikar</strong>
+    </div>
+	  
+    <!-- Add more testimonials here safely in future -->
+
+  </div>
+</div>
+
 <script>
   // Get modal and button Java for flaoting button 
   var modal = document.getElementById("timetableModal");
@@ -124,6 +194,29 @@
   }
  </script>
 
+				
+<script>
+// Testimonial flaoting button
+var testimonialsModal = document.getElementById("testimonialsModal");
+var testimonialsBtn = document.getElementById("testimonialsBtn");
+var closeTestimonials = document.getElementById("closeTestimonials");
+
+testimonialsBtn.onclick = function() {
+  testimonialsModal.style.display = "block";
+}
+
+closeTestimonials.onclick = function() {
+  testimonialsModal.style.display = "none";
+}
+
+window.addEventListener("click", function(event) {
+  if (event.target == testimonialsModal) {
+    testimonialsModal.style.display = "none";
+  }
+});
+</script>
+
+				
 <!-- Footer section for rights reserved and developed by -->
 <footer>
   <p class="copyright">© <span id="year"></span> Yoga with Kapil. All Rights Reserved.</p>
@@ -290,3 +383,4 @@ playBtn.addEventListener("click", () => {
 
            </body>
 			</html>
+

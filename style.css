@@ -624,15 +624,16 @@ footer .dev-note {
 }
 
 
-/ * testimonial button place changing */ 
+/* Timetable button place changing */ 
 #timetableBtn {
     bottom: 80px;
 }
 
 
-/ * testimonial button place changing */ 
+/* testimonial button place changing */ 
 #testimonialsBtn {
     bottom: 140px;
 }
+
 
 

@@ -623,3 +623,9 @@ footer .dev-note {
   }
 }
 
+/ * testimonial button place changing */ 
+
+#testimonialsBtn {
+    bottom: 80px;
+}
+

@@ -464,7 +464,7 @@ h2 {
 .testimonial-item {
   margin-bottom: 20px;
   padding-bottom: 15px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 
@@ -634,6 +634,7 @@ footer .dev-note {
 #testimonialsBtn {
     bottom: 140px;
 }
+
 
 
 

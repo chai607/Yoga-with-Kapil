@@ -580,37 +580,44 @@ footer .dev-note {
 } 
 
 .holiday-popup-content {
-  background: #ffffff;
+  background: #fffdf8;
   padding: 30px 25px;
   max-width: 420px;
   width: 90%;
   text-align: center;
   border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
   animation: popupFadeIn 0.5s ease;
 }
 
 .holiday-popup-content h3 {
-  margin-top: 0;
-  color: #c0392b;
-  font-size: 1.4em;
+  color: #c75a2c;
+  margin-bottom: 15px;
+  line-height: 1.4;
+  font-size: 24px;
 }
 
 .holiday-popup-content p {
-  font-size: 1.05em;
+  font-size: 18px;
   color: #333;
-  line-height: 1.6;
-  margin: 15px 0 25px;
+/*--  line-height: 1.6; ---*/
+/*--   margin: 15px 0 25px; --*/
 }
 
-.holiday-close {
-  background: linear-gradient(135deg, #ff7043, #ff5722);
-  color: #fff;
+.holiday-popup-content button {
+/*--  background: linear-gradient(135deg, #ff7043, #ff5722); --*/ 
+  margin-top: 22px;
+  color: white;
   border: none;
-  border-radius: 30px;
-  padding: 10px 22px;
-  font-size: 1em;
+  border-radius: 20px;
+  background: #c75a2c;
+  padding: 8px 18px;
+  font-size: 14px;
   cursor: pointer;
+}
+
+.holiday-popup-content button:hover {
+    background: #a94720;
 }
 
 .holiday-close:hover {
@@ -640,6 +647,7 @@ footer .dev-note {
 #testimonialsBtn {
     bottom: 140px;
 }
+
 
 
 

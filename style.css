@@ -535,7 +535,7 @@ footer .dev-note {
 #playOmBtn {
   position: fixed;
   bottom: 80px;
-  right: 20px;
+  left: 20px;
   background: linear-gradient(135deg, #6a5acd, #483d8b);
   color: white;
   border: none;
@@ -634,6 +634,7 @@ footer .dev-note {
 #testimonialsBtn {
     bottom: 140px;
 }
+
 
 
 

@@ -360,10 +360,10 @@ playBtn.addEventListener("click", () => {
 <div class="april-theme" role="dialog" aria-live="polite">
 <div id="holidayPopup" class="holiday-popup" role="dialog" aria-live="plite">
 <div class="holiday-popup-content">
-    <h3> Yoga with kapil presents April's Theme: Strength & Resilience </h3>
+    <h3> Yoga with Kapil presents <br> April's Theme: Strength & Resilience </h3>
     <p> Book your slots today. </p>
     
-    <button> Ok, Got it </button>
+    <button onclick="closePopup()"> Ok, Got it </button>
   </div>
 </div>
 </div> 
@@ -382,10 +382,14 @@ playBtn.addEventListener("click", () => {
   } else {
     popup.style.display = "none"; // auto-disable popup
   }
+  function closePopup() {
+  document.getElementById("holidayPopup").style.display = "none";
+  }
 </script>
 
            </body>
 			</html>
+
 
 
 

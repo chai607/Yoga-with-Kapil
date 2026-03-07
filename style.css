@@ -566,10 +566,10 @@ footer .dev-note {
 
 
 /* ---------------- HOLIDAY POPUP NOTICE ---------------- */
-/.holiday-popup {
-/  position: fixed;
-/  top: 0;
-/  left: 0;
+ .holiday-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.65);
@@ -577,7 +577,7 @@ footer .dev-note {
   align-items: center;
   justify-content: center;
   z-index: 2000;
-} --*/
+} 
 
 .holiday-popup-content {
   background: #ffffff;
@@ -640,6 +640,7 @@ footer .dev-note {
 #testimonialsBtn {
     bottom: 140px;
 }
+
 
 
 
